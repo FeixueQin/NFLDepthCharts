@@ -16,6 +16,7 @@ namespace Application.Helpers{
                         existingDepthList.Insert(i, newEntry);
                         break;
                     }
+                    
                 }
 
                 if (!existingDepthList.Contains(newEntry))
@@ -24,6 +25,4 @@ namespace Application.Helpers{
                 }
         }
     }
-    
-
 }

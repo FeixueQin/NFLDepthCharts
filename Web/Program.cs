@@ -1,6 +1,9 @@
+using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Filters;
 using Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddCors(options =>
 {
@@ -18,9 +21,19 @@ builder.Logging.AddDebug(); // Add debug logging
 builder.Logging.AddFilter("Microsoft", LogLevel.Warning); // Set log level for Microsoft namespaces
 builder.Logging.AddFilter("System", LogLevel.Warning);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+        options.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented; // Optional for pretty-printing JSON
+    });
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.ExampleFilters();
+});
+builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
+
 
 //add Application services 
 builder.Services.AddApplicationServices(builder.Configuration);
@@ -34,7 +47,10 @@ app.UseCors("AllowAllOrigins");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+    });
 }
 
 app.UseHttpsRedirection();

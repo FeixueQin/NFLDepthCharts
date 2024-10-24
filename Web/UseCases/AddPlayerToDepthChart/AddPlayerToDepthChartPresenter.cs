@@ -13,7 +13,12 @@ namespace Web.UseCases.AddPlayerToDepthChart{
 
         public void Failure(string errorMessage)
         {
-            ViewModel = new BadRequestObjectResult(new { Errors = errorMessage });
+            ViewModel = new ObjectResult(new ProblemDetails
+            {
+                Title = "Failed To Add Player To Team Depth Chart",
+                Detail = errorMessage,
+                Status = 500
+            });
         }
 
         public void Success()

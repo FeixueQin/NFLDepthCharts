@@ -14,7 +14,12 @@ namespace Web.UseCases.GetBackups{
 
         public void Failure(string errorMessage)
         {
-            ViewModel = new BadRequestObjectResult(new { Errors = errorMessage });
+            ViewModel = new ObjectResult(new ProblemDetails
+            {
+                Title = "Failed To Get Backup Players From Team Depth Chart",
+                Detail = errorMessage,
+                Status = 500
+            });
         }
 
         public void Success(List<Player> players)

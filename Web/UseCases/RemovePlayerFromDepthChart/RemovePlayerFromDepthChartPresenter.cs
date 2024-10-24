@@ -14,7 +14,12 @@ namespace Web.UseCases.RemovePlayerFromDepthChart{
 
         public void Failure(string errorMessage)
         {
-            ViewModel = new StatusCodeResult(500);
+            ViewModel = new ObjectResult(new ProblemDetails
+            {
+                Title = "Failed To Remove Player From Team Depth Chart",
+                Detail = errorMessage,
+                Status = 500
+            });
         }
 
         public void NotFound()

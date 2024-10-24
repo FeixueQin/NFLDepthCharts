@@ -9,7 +9,12 @@ namespace Web.UseCases.GetFullDepthChart{
 
         public void Failure(string errorMessage)
         {
-            ViewModel = new BadRequestObjectResult(new { Errors = errorMessage });
+            ViewModel = new ObjectResult(new ProblemDetails
+            {
+                Title = "Failed To Get Team Depth Chart",
+                Detail = errorMessage,
+                Status = 500
+            });
         }
 
         public void Success(List<Depth> fullDepth)

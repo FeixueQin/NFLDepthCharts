@@ -6,7 +6,7 @@ using Web.DTO;
 
 namespace Web.UseCases.AddPlayerToDepthChart{
     [ApiController]
-    [Route("[controller]")]
+    [Route("/team-depth")]
     public class AddPlayerToDepthChartController : ControllerBase
     {
 

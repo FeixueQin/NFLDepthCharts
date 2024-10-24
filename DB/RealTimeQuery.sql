@@ -1,1 +1,0 @@
-DELETE from DepthChart where depthChartId > 1

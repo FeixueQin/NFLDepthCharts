@@ -5,6 +5,5 @@ namespace Application.Usecases.AddPlayerToDepthChart{
         void Success();
         void Failure(string errorMessage);
         void BadRequest(string errorMessage);
-        void BadRequest(List<string> errorMessages);
     }
 }

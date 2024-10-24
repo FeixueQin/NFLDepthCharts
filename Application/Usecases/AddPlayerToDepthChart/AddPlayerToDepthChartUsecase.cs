@@ -6,9 +6,7 @@ namespace Application.Usecases.AddPlayerToDepthChart{
     public class AddPlayerToDepthChartUsecase : IAddPlayerToDepthChartUsecase
     {
         private readonly ITeamDepthChartRepo _teamDepthRepo;
-
         private readonly ILogger<AddPlayerToDepthChartUsecase> _logger;
-
         private IOutputPort? _outputPort;
         
         public AddPlayerToDepthChartUsecase(ITeamDepthChartRepo teamDepthRepo, ILogger<AddPlayerToDepthChartUsecase> logger){
@@ -18,6 +16,11 @@ namespace Application.Usecases.AddPlayerToDepthChart{
         
         public async Task Execute(PositionAbbre positionAbbre, int playerNumber, int? positionDepth = null)
         {
+            if (positionDepth < 1)
+            {
+                _outputPort!.BadRequest("Position depth must be at least 1.");
+                return;
+            }
             try{
                 var updatePositionDepth = positionDepth ?? 0;
                 await _teamDepthRepo.InsertPlayerToDepthChart(positionAbbre, playerNumber, updatePositionDepth);

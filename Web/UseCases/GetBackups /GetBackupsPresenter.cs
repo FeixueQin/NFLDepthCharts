@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.UseCases.GetBackups{
     public class GetBackupsPresenter : IOutputPort
     {
-         public IActionResult ViewModel { get; set; } 
+        public IActionResult ViewModel { get; set; } 
 
         public void BadRequest(string errorMessage)
         {

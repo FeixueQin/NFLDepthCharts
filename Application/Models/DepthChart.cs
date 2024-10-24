@@ -5,8 +5,6 @@ namespace Application.Models{
         public int PlayerNumber { get; set; } // Foreign Key from Players
         public int PositionId { get; set; } // Foreign Key from Positions
         public int PositionDepth { get; set; }
-
-        // Navigation properties if needed
         public Player Player { get; set; }
         public Position Position { get; set; }
     }

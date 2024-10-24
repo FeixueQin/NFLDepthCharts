@@ -3,11 +3,10 @@ namespace Application.Models{
 {
     public int PositionId { get; set; } // Primary Key
 
-    public string Name { get; set; } // Position name, e.g., "LWR", "RWR", etc.
+    public string Name { get; set; }
 
-    public string Abbreviation { get; set; } // Abbreviation for the position
+    public string Abbreviation { get; set; }
 
-    // Navigation property for DepthChart (if needed)
     public ICollection<Depth> Depths { get; set; }
 }
 

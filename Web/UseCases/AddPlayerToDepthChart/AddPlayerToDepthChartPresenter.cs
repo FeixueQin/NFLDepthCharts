@@ -11,11 +11,6 @@ namespace Web.UseCases.AddPlayerToDepthChart{
             ViewModel = new BadRequestObjectResult(new { Error = errorMessage });
         }
 
-        public void BadRequest(List<string> errorMessages)
-        {
-            ViewModel = new BadRequestObjectResult(new { Errors = errorMessages });
-        }
-
         public void Failure(string errorMessage)
         {
             ViewModel = new BadRequestObjectResult(new { Errors = errorMessage });

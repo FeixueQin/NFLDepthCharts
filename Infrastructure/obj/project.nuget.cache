@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aHsZQhX09iM=",
+  "dgSpecHash": "78uLh5r6O5A=",
   "success": true,
   "projectFilePath": "/Users/tanfeixue/Documents/GitHub/NFLDepthCharts/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/tanfeixue/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
     "/Users/tanfeixue/.nuget/packages/microsoft.data.sqlite.core/8.0.10/microsoft.data.sqlite.core.8.0.10.nupkg.sha512",
     "/Users/tanfeixue/.nuget/packages/microsoft.entityframeworkcore/8.0.10/microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
     "/Users/tanfeixue/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.10/microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",

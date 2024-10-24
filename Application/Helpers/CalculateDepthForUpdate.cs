@@ -33,7 +33,6 @@ namespace Application.Helpers{
 
 
         public static void CalculateDepthForDelete(List<Depth> existingDepthList){
-            // Adjust the PositionDepth for all players in the list
             for (var i = 0; i < existingDepthList.Count; i++) {
                 existingDepthList[i].PositionDepth = i + 1;
             }

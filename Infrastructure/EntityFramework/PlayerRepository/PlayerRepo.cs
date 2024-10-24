@@ -17,5 +17,12 @@ namespace Infrastructure.EntityFramework{
 
             return player!;
         }
+
+        public async Task<HashSet<int>> GetAllPlayerNumber()
+        {
+            var players = await _context.Players.ToListAsync();
+            var uniqueNumberSet = new HashSet<int>(players.Select(p => p.PlayerNumber));
+            return uniqueNumberSet!;
+        }
     }
 }

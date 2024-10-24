@@ -19,7 +19,7 @@ Key Usecases
     ```bash
     dotnet restore
     ```
-- Make sure the SQLite has been install correctly
+- Make sure the SQLite has been installed correctly
     1. Run the DB to see if there is any data in the tables.
 
 - If the DB is empty, run the following SQL script
@@ -35,5 +35,3 @@ Key Usecases
     ```bash
     dotnet test
     ```
-
-## Develop

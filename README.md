@@ -13,6 +13,12 @@ Key Usecases
 - EntityFramework
 - Xunit, Moq
 
+## Project Reference
+Using a hybrid Clean Architecture
+- Web.proj references to Application.proj
+- Infrastructure.proj references to Application.proj
+- Application.proj reference to Infrastructure.proj
+
 ## How it works
 - Pull down the code from Github
 - Run command to install packages 

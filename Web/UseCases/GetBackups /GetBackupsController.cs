@@ -21,7 +21,7 @@ namespace Web.UseCases.GetBackups{
         
         [HttpPost]
         [SwaggerRequestExample(typeof(GetBackupRequest), typeof(GetBackupRequestExample))]
-        public async Task<IActionResult> AddPlayerToDepthChart([FromBody] GetBackupRequest request){
+        public async Task<IActionResult> GetBackups([FromBody] GetBackupRequest request){
             await _useCase.Execute(request.PositionAbbre, request.PlayerNumber);
             return _presenter.ViewModel;
         }

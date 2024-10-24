@@ -2,7 +2,6 @@ using Application.Enums;
 using Application.Models;
 using Application.Repositories;
 using Application.Usecases.RemovePlayerFromDepthChart;
-using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 

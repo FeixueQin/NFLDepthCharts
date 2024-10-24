@@ -22,7 +22,6 @@ namespace Web.UseCases.RemovePlayerFromDepthChart{
         [HttpDelete]
         [SwaggerRequestExample(typeof(RemoveFromDepthChartRequest), typeof(RemoveFromDepthChartRequestExample))]
         public async Task<IActionResult> RemovePlayerToDepthChart([FromBody] RemoveFromDepthChartRequest request){
-            var asd = request;
             await _useCase.Execute(request.PositionAbbre, request.PlayerNumber);
             return _presenter.ViewModel;
         }

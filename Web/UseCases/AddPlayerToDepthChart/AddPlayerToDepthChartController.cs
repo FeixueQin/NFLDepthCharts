@@ -23,7 +23,6 @@ namespace Web.UseCases.AddPlayerToDepthChart{
         [HttpPost]
         [SwaggerRequestExample(typeof(AddPlayerToDepthChartRequest), typeof(AddPlayerToDepthChartRequestExample))]
         public async Task<IActionResult> AddPlayerToDepthChart([FromBody] AddPlayerToDepthChartRequest request){
-            var asd = request;
             await _useCase.Execute(request.PositionAbbre, request.PlayerNumber, request.PositionDepth);
             return _presenter.ViewModel;
         }

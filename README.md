@@ -30,7 +30,7 @@ Using a hybrid Clean Architecture
 
 - If the DB is empty, run the following SQL script
     1. Run the CreateTable.sql file in the DB folder to create 3 tables: Players, Positions and DepthChart
-    2. Run the SeedData.sql file in the DB folder to create some raw data in the two tale: Players and Positions 
+    2. Run the SeedData.sql file in the DB folder to create some raw data in the two tables: Players and Positions 
 - Run the Web application
     1. Direct to the Web project root and run the command:
     ```bash

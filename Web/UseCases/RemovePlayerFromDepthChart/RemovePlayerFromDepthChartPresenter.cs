@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.UseCases.RemovePlayerFromDepthChart{
     public class RemovePlayerFromDepthChartPresenter : IOutputPort
     {
-        public IActionResult? ViewModel { get; set; }
+        public IActionResult ViewModel { get; set; } = new OkObjectResult(new List<Player>());
 
         public void BadRequest(string errorMessage)
         {

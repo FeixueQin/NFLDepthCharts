@@ -7,6 +7,6 @@ namespace Web.DTO{
     }
 
     public class FullChartDataResponse{
-        public Dictionary<string, List<DepthChartEntry>> TeamDepthData { get; set; }
+        public Dictionary<string, List<DepthChartEntry>>? TeamDepthData { get; set; }
     }
 }

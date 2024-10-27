@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.UseCases.GetFullDepthChart{
     public class GetFullDepthChartPresenter : IOutputPort
     {
-        public IActionResult ViewModel { get; set; } 
-
+        public IActionResult ViewModel { get; set; } = new OkObjectResult(new List<Depth>());
+        
         public void Failure(string errorMessage)
         {
             ViewModel = new ObjectResult(new ProblemDetails

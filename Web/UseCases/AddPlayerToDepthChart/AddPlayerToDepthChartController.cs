@@ -9,9 +9,7 @@ namespace Web.UseCases.AddPlayerToDepthChart{
     [Route("/team-depth")]
     public class AddPlayerToDepthChartController : ControllerBase
     {
-
         private readonly IAddPlayerToDepthChartUsecase _useCase;
-
         private readonly AddPlayerToDepthChartPresenter _presenter;
 
         public AddPlayerToDepthChartController(IAddPlayerToDepthChartUsecase usecase){

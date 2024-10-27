@@ -8,7 +8,6 @@ namespace Web.UseCases.RemovePlayerFromDepthChart{
     [Route("/team-depth")]
     public class RemovePlayerFromDepthChartController : ControllerBase
     {
-
         private readonly IRemovePlayerFromDepthChartUsecase _useCase;
 
         private readonly RemovePlayerFromDepthChartPresenter _presenter;
@@ -25,6 +24,5 @@ namespace Web.UseCases.RemovePlayerFromDepthChart{
             await _useCase.Execute(request.PositionAbbre, request.PlayerNumber);
             return _presenter.ViewModel;
         }
-
     }
 }

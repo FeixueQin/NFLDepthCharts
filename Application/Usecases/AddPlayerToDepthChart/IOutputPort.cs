@@ -1,4 +1,3 @@
-
 namespace Application.Usecases.AddPlayerToDepthChart{
     public interface IOutputPort
     {

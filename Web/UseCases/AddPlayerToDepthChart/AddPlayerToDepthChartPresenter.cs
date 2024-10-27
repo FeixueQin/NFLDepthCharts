@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.UseCases.AddPlayerToDepthChart{
     public class AddPlayerToDepthChartPresenter : IOutputPort
     {
-        public IActionResult ViewModel { get; set; } 
+        public IActionResult ViewModel { get; set; } = new OkResult();
 
         public void BadRequest(string errorMessage)
         {

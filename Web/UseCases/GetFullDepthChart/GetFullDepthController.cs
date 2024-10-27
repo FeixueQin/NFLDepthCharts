@@ -7,9 +7,7 @@ namespace Web.UseCases.GetFullDepthChart{
     [Route("/get-full-depth")]
     public class GetFullDepthController : ControllerBase
     {
-
         private readonly IGetFullDepthChartUsecase _useCase;
-
         private readonly GetFullDepthChartPresenter _presenter;
 
         public GetFullDepthController(IGetFullDepthChartUsecase usecase){

@@ -1,7 +1,6 @@
 using Application.Models;
 using Application.Enums;
 
-
 namespace Web.Test.Mappers{
     public class PlayerMapperTests
     {

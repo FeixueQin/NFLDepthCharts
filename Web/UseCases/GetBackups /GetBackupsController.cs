@@ -8,9 +8,7 @@ namespace Web.UseCases.GetBackups{
     [Route("/get-backups")]
     public class GetBackupsController : ControllerBase
     {
-
         private readonly IGetBackupsUsecase _useCase;
-
         private readonly GetBackupsPresenter _presenter;
 
         public GetBackupsController(IGetBackupsUsecase usecase){
